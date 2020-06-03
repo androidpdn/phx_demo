@@ -19,13 +19,6 @@
 }
 
 
-@tailwind base;
-
-@tailwind components;
-
-@tailwind utilities;
-
-
 .phx-disconnected{
   cursor: wait;
 }
@@ -97,3 +90,9 @@
 .alert:empty {
   display: none;
 }
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
