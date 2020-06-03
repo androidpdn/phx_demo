@@ -1,5 +1,6 @@
 defmodule DemoWeb.Router do
   use DemoWeb, :router
+  use Kaffy.Routes, scope: "/admin"
 
   pipeline :browser do
     plug :accepts, ["html"]
