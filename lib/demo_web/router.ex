@@ -19,6 +19,7 @@ defmodule DemoWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/private", PrivatePageController, :index
     live "/live", PageLive, :index
   end
 
