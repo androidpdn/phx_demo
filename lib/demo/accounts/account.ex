@@ -13,5 +13,6 @@ defmodule Demo.Accounts.Account do
     account
     |> cast(attrs, [:name])
     |> validate_required([:name])
+    |> unique_constraint(:name, name: :accounts_name_index)
   end
 end

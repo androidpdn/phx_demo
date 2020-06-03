@@ -3,10 +3,11 @@ defmodule Demo.Repo.Migrations.CreateAccounts do
 
   def change do
     create table(:accounts) do
-      add :name, :string
+      add :name, :string, null: false
 
       timestamps()
     end
 
+    create unique_index(:accounts, [:name])
   end
 end
