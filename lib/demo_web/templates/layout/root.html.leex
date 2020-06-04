@@ -7,6 +7,7 @@
     <%= csrf_meta_tag() %>
     <%= live_title_tag assigns[:page_title] || "Demo", suffix: " · Phoenix Framework" %>
     <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <link phx-track-static rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
 
     <style>
         @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
@@ -32,7 +33,7 @@
       </div>
 
       <footer class="w-full bg-white text-right p-4">
-        Built by <a target="_blank" href="https://github.com/androidpdn" class="underline">Hao</a>.
+        Github <a target="_blank" href="https://github.com/androidpdn" class="underline">Link</a>.
       </footer>
     </div>
 

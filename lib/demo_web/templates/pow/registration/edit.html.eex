@@ -1,6 +1,8 @@
 <h1>Edit profile</h1>
-
-<%= form_for @changeset, @action, [as: :user], fn f -> %>
+<div class="container">
+<%= form_for @changeset, @action,
+             [as: :user, class: "bg-blue-300 text-center w-1/3 px-3 py-4 text-black mx-auto rounded"],
+             fn f -> %>
   <%= if @changeset.action do %>
     <div class="alert alert-danger">
       <p>Oops, something went wrong! Please check the errors below.</p>
@@ -8,23 +10,24 @@
   <% end %>
 
   <%= label f, :current_password %>
-  <%= password_input f, :current_password %>
+  <%= password_input f, :current_password, placeholder: "Current password", class: "block w-full mx-auto text-sm py-2 px-3 rounded" %>
   <%= error_tag f, :current_password %>
 
-  <%= label f, Pow.Ecto.Schema.user_id_field(@changeset) %>
-  <%= text_input f, Pow.Ecto.Schema.user_id_field(@changeset) %>
+  <%= label f, Pow.Ecto.Schema.user_id_field(@changeset), class: " my-3" %>
+  <%= text_input f, Pow.Ecto.Schema.user_id_field(@changeset) , class: "block w-full mx-auto text-sm text-grey-500, py-2 px-3 rounded" %>
   <%= error_tag f, Pow.Ecto.Schema.user_id_field(@changeset) %>
 
-  <%= label f, :password %>
-  <%= password_input f, :password %>
+  <%= label f, :password, class: " my-3" %>
+  <%= password_input f, :password , placeholder: "Password", class: "block w-full mx-auto text-sm py-2 px-3 rounded" %>
   <%= error_tag f, :password %>
 
-  <%= label f, :password_confirmation %>
-  <%= password_input f, :password_confirmation %>
+  <%= label f, :password_confirmation, class: " my-3" %>
+  <%= password_input f, :password_confirmation , placeholder: "Password confirmation", class: "block w-full mx-auto text-sm py-2 px-3 rounded" %>
   <%= error_tag f, :password_confirmation %>
 
   <div>
-    <%= submit "Update" %>
+    <%= submit "Update", class: "bg-blue-300 text-white font-bold py-2 px-4 rounded border block mx-auto w-full my-10" %>
   </div>
 <% end %>
+</div>
 
