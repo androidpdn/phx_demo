@@ -17,6 +17,11 @@ config :demo, Demo.Repo,
 # with webpack to recompile .js and .css sources.
 config :demo, DemoWeb.Endpoint,
   http: [port: 4000],
+  https: [
+    port: 4001,
+    keyfile: "priv/cert/dev.key",
+    certfile: "priv/cert/dev.crt"
+  ],
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
@@ -45,9 +50,8 @@ config :demo, DemoWeb.Endpoint,
 #
 #     https: [
 #       port: 4001,
-#       cipher_suite: :strong,
-#       keyfile: "priv/cert/selfsigned_key.pem",
-#       certfile: "priv/cert/selfsigned.pem"
+#       keyfile: "priv/cert/dev.key",
+#       certfile: "priv/cert/dev.crt"
 #     ],
 #
 # If desired, both `http:` and `https:` keys can be
