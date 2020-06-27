@@ -31,6 +31,7 @@ defmodule DemoWeb.Router do
 
     get "/", PageController, :index
     live "/live", PageLive, :index
+    resources "/secrets", SecretController
   end
 
   scope "/", DemoWeb do

@@ -1,6 +1,4 @@
 /* This file is for your main application css. */
-@import "./phoenix.css";
-@import "../node_modules/nprogress/nprogress.css";
 
 /* LiveView specific classes for your customizations */
 .invalid-feedback {
@@ -91,9 +89,6 @@
   display: none;
 }
 
-@tailwind base;
-
-@tailwind components;
 
 
 .h1, h1 {
@@ -319,4 +314,3 @@ th {
   @apply border border-gray-300;
 }
 
-@tailwind utilities;

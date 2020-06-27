@@ -1,6 +1,6 @@
 <div class="container">
 <%= form_for @changeset, @action,
-             [as: :user, class: "bg-blue-300 text-center w-1/3 px-3 py-4 text-dark mx-auto rounded"],
+             [as: :user, class: "bg-sidebar bg-opacity-25 text-center w-1/3 px-3 py-4 text-grey-300 mx-auto rounded"],
              fn f -> %>
   <%= if @changeset.action do %>
     <div class="alert alert-danger">
@@ -9,15 +9,15 @@
   <% end %>
 
 
-  <%= text_input f, Pow.Ecto.Schema.user_id_field(@changeset), placeholder: "Email", class: "block w-full mx-auto text-sm py-2 px-3 rounded" %>
+  <%= text_input f, Pow.Ecto.Schema.user_id_field(@changeset), placeholder: "Email", class: "block w-full mx-auto text-sm py-4 px-3 rounded" %>
   <%= error_tag f, Pow.Ecto.Schema.user_id_field(@changeset) %>
 
 
-  <%= password_input f, :password, placeholder: "Password", class: "block w-full mx-auto text-sm py-2 px-3 rounded my-3" %>
+  <%= password_input f, :password, placeholder: "Password", class: "block w-full mx-auto text-sm py-4 px-3 rounded my-3" %>
   <%= error_tag f, :password %>
 
   <div>
-    <%= submit "Sign in" , class: "bg-blue-300 text-white font-bold py-2 px-4 rounded border block mx-auto w-full"%>
+    <%= submit "Sign in" , class: "bg-sidebar text-white opacity-75 font-bold py-4 px-4 rounded border block mx-auto w-full"%>
   </div>
 <% end %>
 

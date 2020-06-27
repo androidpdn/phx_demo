@@ -1,7 +1,7 @@
-<h1>Register</h1>
+<h1 class="text-center">Register</h1>
 <div class="container">
 <%= form_for @changeset, @action,
-             [as: :user, class: "bg-blue-300 text-center w-1/3 px-3 py-4 text-white mx-auto rounded"],
+             [as: :user, class: "bg-sidebar text-center w-1/3 px-3 py-4 text-white mx-auto rounded"],
              fn f -> %>
   <%= if @changeset.action do %>
     <div class="alert alert-danger">
@@ -9,24 +9,24 @@
     </div>
   <% end %>
 
-  <%= label f, :account_name %>
+  <%= label f, :account_name, class: " opacity-75" %>
   <%= text_input f, :account_name, placeholder: "Account name", class: "block w-full mx-auto text-sm py-2 px-3 rounded" %>
   <%= error_tag f, :account_name %>
 
-  <%= label f, Pow.Ecto.Schema.user_id_field(@changeset), class: " my-3" %>
+  <%= label f, Pow.Ecto.Schema.user_id_field(@changeset), class: " opacity-75 my-3" %>
   <%= text_input f, Pow.Ecto.Schema.user_id_field(@changeset) , placeholder: "Email", class: "block w-full mx-auto text-sm py-2 px-3 rounded" %>
   <%= error_tag f, Pow.Ecto.Schema.user_id_field(@changeset) %>
 
-  <%= label f, :password, class: " my-3" %>
+  <%= label f, :password, class: " opacity-75 my-3" %>
   <%= password_input f, :password , placeholder: "Password", class: "block w-full mx-auto text-sm py-2 px-3 rounded" %>
   <%= error_tag f, :password %>
 
-  <%= label f, :password_confirmation, class: " my-3" %>
+  <%= label f, :password_confirmation, class: " opacity-75 my-3" %>
   <%= password_input f, :password_confirmation , placeholder: "Password confirmation", class: "block w-full mx-auto text-sm py-2 px-3 rounded" %>
   <%= error_tag f, :password_confirmation %>
 
   <div>
-    <%= submit "Register", class: "bg-blue-300 text-white font-bold py-2 px-4 rounded border block mx-auto w-full my-10" %>
+    <%= submit "Register", class: "bg-sidebar text-white opacity-75 font-bold py-2 px-4 rounded border block mx-auto w-full mt-8" %>
   </div>
 <% end %>
 </div>
